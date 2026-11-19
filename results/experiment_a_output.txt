@@ -1,0 +1,15 @@
+--- 10,000,000 elements (best of runs, seconds) ---
+python loop over list   : 0.15271250007208437
+builtin sum over list   : 0.029214165988378227
+np.sum over ndarray     : 0.0012762079713866115
+python loop over ndarray: 0.3648318749619648
+--- memory ---
+one int object          : 28 bytes
+list's pointer array    : 8.0000056 bytes per element
+ndarray                 : 8.0 bytes per element
+--- tiny arrays (100k calls, seconds) ---
+sum(small_list)         : 0.00673304102383554
+np.sum(small_arr)       : 0.07903462497051805
+--- optional: does memory order matter? ---
+sum(list), in order     : 0.029147292021661997
+sum(list), shuffled     : 0.15410354197956622

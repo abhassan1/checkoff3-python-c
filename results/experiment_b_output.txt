@@ -1,0 +1,8 @@
+--- 1,000,000 elements (best of runs, seconds) ---
+pure Python loop            : 0.015931 s   (15.93 ns per element)
+Python loop calling C add() : 0.315249 s   (315.25 ns per element)
+ONE call to C sum_array()   : 0.000093 s   (0.09 ns per element)
+np.sum                      : 0.000092 s   (0.09 ns per element)
+--- what if we forget restype? ---
+correct answer      : 499999500000
+without restype     : 1783293664
